@@ -72,6 +72,10 @@ function playRound(selectionValue){
 
          //+1 point for humanScore
          humanScore += 1;
+         const hPoints = document.createElement("div");
+         hPoints.classList.add("text");
+         hPoints.innerHTML = `Your score is ${humanScore} points.`;
+         gameElements.appendChild(hPoints)
  }else{
      //I created the "Your choice is:" text on the DOM and assign it a class
      const humanChoiceText = document.createElement("div");
@@ -91,8 +95,12 @@ function playRound(selectionValue){
      cpuWin.innerHTML = `CPU wins and you lose!`;
      gameElements.appendChild(cpuWin);
 
-     //+1 point for humanScore
+     //+1 point for cpuScore
      cpuScore += 1;
+     const cpuPoints = document.createElement("div");
+     cpuPoints.classList.add("text");
+     cpuPoints.innerHTML = `CPU score is ${cpuScore} points.`;
+     gameElements.appendChild(cpuPoints);
 
  }
 
