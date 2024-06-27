@@ -6,7 +6,7 @@ This is rock paper and scissors played from the browser. It not only incorporate
 At first the DOM will only have the title and 3 buttons, "Rock","Paper" and Scissors and at the very bottom there will be a footer
 After selecting one of the options the use will see the following:
   The user will see the title at the top
-  
+
   The user will see the CPU selection 
   The user will see the human selection
 
@@ -24,8 +24,8 @@ When the user selects one of the weapons the selection will be stored. In order 
                 CPU Selection (div with class "cpu_selection" with id "cpu_selection_id")
                 Human Selection (div with class "human_selection" with id "human_selection_id")
                 
-                CPU SCORE (div with class "CPU_score")
-                HUMAN SCORE (div with class "human_score")
+                CPU SCORE (div with class "CPU_score" and ID "CPU_score_id")
+                HUMAN SCORE (div with class "human_score" and ID "human_score_id")
 
     ROCK_BUTTON(button with class "rock" and id "rock_button") PAPER_BUTTON(button with class "paper" and id "paper_button") SCISSORS_BUTTON (button with class "scissors" and id "scissors_button")
                      FOOTER (footer label)
@@ -42,6 +42,15 @@ Declare variable for "CPU_Score" that will store the CPU score
 
 Declare constant that stores CPU selection div by its ID
 Declare constant that stores that store human selection div by its ID
+Declare constant that stores CPU score div by its ID
+Declare constant that stores Human score div by its ID
+
+##Conditionals
+
+
+
+
+    
 
 
 
