@@ -1,48 +1,51 @@
-//Selectors
+// Selectors
 const rockButton = document.querySelector("#rock_id");
 const paperButton = document.querySelector("#paper_id");
 const scissorsButton = document.querySelector("#scissors_id");
-const gameElements = document.querySelector(".game");
+const gameElements = document.querySelector(".game1");
+const game2Elements = document.querySelector(".game2");
 const divHumanScore = document.querySelector("#userScore");
 const divCpuScore = document.querySelector("#cpuScore");
 
-//Variables
+// Variables
 let humanScore = 0;
 let cpuScore = 0;
 
-//Event listeners
+// Event listeners
 rockButton.addEventListener("click", () => playRound(" Rock"));
 paperButton.addEventListener("click", () => playRound(" Paper"));
 scissorsButton.addEventListener("click", () => playRound(" Scissors"));
 
-//Functions
+// Functions
 function playRound(selectionValue) {
     const cpuChoice = cpuChoiceFunc();
 
     // Selectors for text elements
-    let humanChoiceText = gameElements.querySelector(".humanChoiceText");
-    let cpuChoiceText = gameElements.querySelector(".cpuChoiceText");
-    let resultText = gameElements.querySelector(".resultText");
+    let humanChoiceText = game2Elements.querySelector(".humanChoiceText");
+    let cpuChoiceText = game2Elements.querySelector(".cpuChoiceText");
+    let resultText = game2Elements.querySelector(".resultText");
 
     // Create elements if they don't exist
     if (!humanChoiceText) {
         humanChoiceText = document.createElement("div");
         humanChoiceText.classList.add("humanChoiceText");
-        gameElements.appendChild(humanChoiceText);
+        game2Elements.appendChild(humanChoiceText);
     }
+    
     if (!cpuChoiceText) {
         cpuChoiceText = document.createElement("div");
         cpuChoiceText.classList.add("cpuChoiceText");
-        gameElements.appendChild(cpuChoiceText);
+        game2Elements.appendChild(cpuChoiceText);
     }
+    
     if (!resultText) {
         resultText = document.createElement("div");
         resultText.classList.add("resultText");
-        gameElements.appendChild(resultText);
+        game2Elements.appendChild(resultText);
     }
 
     if (cpuChoice === selectionValue) {
-        humanChoiceText.innerHTML = `Your choice is ${selectionValue}.`;
+        humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
         cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
         resultText.innerHTML = `${selectionValue} ties ${cpuChoice}`;
     } else {
@@ -55,7 +58,7 @@ function playRound(selectionValue) {
             humanScore += 1;
             divHumanScore.innerHTML = "Your score is " + humanScore;
         } else {
-            humanChoiceText.innerHTML = `Your choice is ${selectionValue}.`;
+            humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
             cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
             resultText.innerHTML = `${cpuChoice} beats ${selectionValue}, you lose`;
             cpuScore += 1;

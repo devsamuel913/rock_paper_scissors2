@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    background-color: #fff9c4;
+    
+}
+
+.text{
+    padding: 15px;
+    border: 2.5px solid black;
+}
+
+.Rock{
+    background-color: #4444;
+}
+
+.Paper{
+    background-color: whitesmoke;
+}
+
+.title_container{
+    display: flex;
+    justify-content: center;
+}
+
+.game1{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.game2_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+button{
+    margin-left: 50px;
+    padding: 20px;
+    border: 4px solid black ;
+    background-color: #add8e6;
+ 
+}
+
+.game{
+    margin-bottom: 100px;
+}
+
+.humanChoiceText,.cpuChoiceText,.resultText{
+    margin-bottom: 25px;
+}
