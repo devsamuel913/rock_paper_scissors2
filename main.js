@@ -44,25 +44,150 @@ function playRound(selectionValue) {
         game2Elements.appendChild(resultText);
     }
 
+    humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
+    cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
+
     if (cpuChoice === selectionValue) {
-        humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
-        cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
+
+        if(selectionValue === " Rock"){
+            humanChoiceText.classList.remove("Paper");
+            humanChoiceText.classList.remove("Scissors");
+            humanChoiceText.classList.add("Rock");
+        }
+        if(selectionValue === " Paper"){
+            humanChoiceText.classList.remove("Rock");
+            humanChoiceText.classList.remove("Scissors");
+            humanChoiceText.classList.add("Paper");
+        }
+        if(selectionValue === " Scissors"){
+            humanChoiceText.classList.remove("Rock");
+            humanChoiceText.classList.remove("Paper");
+            humanChoiceText.classList.add("Scissors");
+        }
+
+
+        if(cpuChoice === " Rock"){
+            cpuChoiceText.classList.remove("Paper");
+            cpuChoiceText.classList.remove("Scissors");
+            cpuChoiceText.classList.add("Rock");
+        }
+        if(cpuChoice === " Paper"){
+            cpuChoiceText.classList.remove("Rock");
+            cpuChoiceText.classList.remove("Scissors");
+            cpuChoiceText.classList.add("Paper");
+        }
+        if(cpuChoice === " Scissors"){
+            cpuChoiceText.classList.remove("Rock");
+            cpuChoiceText.classList.remove("Paper");
+            cpuChoiceText.classList.add("Scissors");
+        }
+
+
+
         resultText.innerHTML = `${selectionValue} ties ${cpuChoice}`;
+        resultText.classList.remove("lose");
+        resultText.classList.remove("win");
+        resultText.classList.add("tie")
     } else {
+       
+
         if ((selectionValue === " Rock" && cpuChoice === " Scissors") ||
             (selectionValue === " Scissors" && cpuChoice === " Paper") ||
             (selectionValue === " Paper" && cpuChoice === " Rock")) {
-            humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
-            cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
+
             resultText.innerHTML = `${selectionValue} beats ${cpuChoice}, you win`;
+
+            if(selectionValue === " Rock"){
+                humanChoiceText.classList.remove("Paper");
+                humanChoiceText.classList.remove("Scissors");
+                humanChoiceText.classList.add("Rock");
+            }
+            if(selectionValue === " Paper"){
+                humanChoiceText.classList.remove("Rock");
+                humanChoiceText.classList.remove("Scissors");
+                humanChoiceText.classList.add("Paper");
+            }
+            if(selectionValue === " Scissors"){
+                humanChoiceText.classList.remove("Rock");
+                humanChoiceText.classList.remove("Paper");
+                humanChoiceText.classList.add("Scissors");
+            }
+
+
+            if(cpuChoice === " Rock"){
+                cpuChoiceText.classList.remove("Paper");
+                cpuChoiceText.classList.remove("Scissors");
+                cpuChoiceText.classList.add("Rock");
+            }
+            if(cpuChoice === " Paper"){
+                cpuChoiceText.classList.remove("Rock");
+                cpuChoiceText.classList.remove("Scissors");
+                cpuChoiceText.classList.add("Paper");
+            }
+            if(cpuChoice === " Scissors"){
+                cpuChoiceText.classList.remove("Rock");
+                cpuChoiceText.classList.remove("Paper");
+                cpuChoiceText.classList.add("Scissors");
+            }
+
+
+
+
+            resultText.classList.remove("lose");
+            resultText.classList.add("win")
             humanScore += 1;
             divHumanScore.innerHTML = "Your score is " + humanScore;
+
+            
+            
+            
         } else {
-            humanChoiceText.innerHTML = `Your choice is ${selectionValue}`;
-            cpuChoiceText.innerHTML = `CPU choice is ${cpuChoice}`;
+            
+            if(selectionValue === " Rock"){
+                humanChoiceText.classList.remove("Paper");
+                humanChoiceText.classList.remove("Scissors");
+                humanChoiceText.classList.add("Rock");
+            }
+            if(selectionValue === " Paper"){
+                humanChoiceText.classList.remove("Rock");
+                humanChoiceText.classList.remove("Scissors");
+                humanChoiceText.classList.add("Paper");
+            }
+            if(selectionValue === " Scissors"){
+                humanChoiceText.classList.remove("Rock");
+                humanChoiceText.classList.remove("Paper");
+                humanChoiceText.classList.add("Scissors");
+            }
+
+
+            if(cpuChoice === " Rock"){
+                cpuChoiceText.classList.remove("Paper");
+                cpuChoiceText.classList.remove("Scissors");
+                cpuChoiceText.classList.add("Rock");
+            }
+            if(cpuChoice === " Paper"){
+                cpuChoiceText.classList.remove("Rock");
+                cpuChoiceText.classList.remove("Scissors");
+                cpuChoiceText.classList.add("Paper");
+            }
+            if(cpuChoice === " Scissors"){
+                cpuChoiceText.classList.remove("Rock");
+                cpuChoiceText.classList.remove("Paper");
+                cpuChoiceText.classList.add("Scissors");
+            }
+
+            
+
+
             resultText.innerHTML = `${cpuChoice} beats ${selectionValue}, you lose`;
+            resultText.classList.remove("win");
+            resultText.classList.add("lose");
             cpuScore += 1;
             divCpuScore.innerHTML = "CPU score is " + cpuScore;
+
+         
+            
+            
         }
     }
 }
@@ -78,7 +203,38 @@ function cpuChoiceFunc() {
     }
 }
 
- 
-//(gameElements.querySelector(".humanChoiceText")) && (gameElements.querySelector(".cpuChoiceText")) && (gameElements.querySelector(".tieText"))
-    
+function determineColor(){
+    if(selectionValue === " Rock"){
+        humanChoiceText.classList.remove("Paper");
+        humanChoiceText.classList.remove("Scissors");
+        humanChoiceText.classList.add("Rock");
+    }
+    if(selectionValue === " Paper"){
+        humanChoiceText.classList.remove("Rock");
+        humanChoiceText.classList.remove("Scissors");
+        humanChoiceText.classList.add("Paper");
+    }
+    if(selectionValue === " Scissors"){
+        humanChoiceText.classList.remove("Rock");
+        humanChoiceText.classList.remove("Paper");
+        humanChoiceText.classList.add("Scissors");
+    }
 
+
+    if(cpuChoice === " Rock"){
+        cpuChoiceText.classList.remove("Paper");
+        cpuChoiceText.classList.remove("Scissors");
+        cpuChoiceText.classList.add("Rock");
+    }
+    if(cpuChoice === " Paper"){
+        cpuChoiceText.classList.remove("Rock");
+        cpuChoiceText.classList.remove("Scissors");
+        cpuChoiceText.classList.add("Paper");
+    }
+    if(cpuChoice === " Scissors"){
+        cpuChoiceText.classList.remove("Rock");
+        cpuChoiceText.classList.remove("Paper");
+        cpuChoiceText.classList.add("Scissors");
+    }
+
+}
